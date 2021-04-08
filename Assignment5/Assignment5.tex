@@ -1,0 +1,189 @@
+  
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 5}
+\author{SAVARANA DATTA - AI20BTECH11008}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/SavaranaDatta/AI1103/blob/main/Assignment5/Assignment5.tex
+\end{lstlisting}
+\section*{Problem(UGC 2018(Dec math set-a), Q.111)}
+Let $X_{1},X_{2},X_{3},..,X_{n}$ be independent random variables follow a common continuous distribution \textbf{F}, which is symmetric about 0. For i=1,2,3,..n, define 
+\begin{align}
+\tag{1.1}
+\label{eq1}
+S_{i} = 
+\begin{cases}
+1 & if \hspace{0.2cm}X_{i}>0
+\\
+-1 & if\hspace{0.2cm} X_{i}<0 \hspace{0.2cm} and
+\\
+0 & if \hspace{0.2cm}X_{i}=0
+\end{cases}
+\end{align}
+$R_{i}$=rank of $|X_{i}|$ in the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}.Which of the following statements are correct?
+\begin{enumerate}[(A)]
+\item $S_{1},S_{2},..,S_{n}$ are independent and identically distributed.
+\item $R_{1},R_{2},..,R_{n}$ are independent and identically distributed.
+\item $S=\brak{S_{1},S_{2},..,S_{n}}$ and $R=\brak{ R_{1},R_{2},..,R_{n}}$ are independent.
+\end{enumerate}
+\section*{Solution(UGC 2018(Dec math set-a), Q.111)}
+A sequence $\{X_{i}\}$ is an Independent and identical if and only if 
+$$F_{X_{n}}(x)=F_{X_{k}}(x)$$
+$\forall$ n,k,x and any subset of terms of the sequence is a set of mutually independent random variables.
+Where F is the probability density function.
+\begin{enumerate}[(A)]
+\item As the probability distribution function of $\{X_{i}\}$ is symmetric about origin we can say that 
+\begin{equation}
+\tag{2.1}
+  F_{X_{i}}(-x)=F_{X_{i}}(x)    \forall x \in R  
+\end{equation}
+and the mean of the distribution($\mu$)
+\begin{equation}
+    \tag{2.2}
+    \mu=0
+\end{equation}
+The sequence $S_{i}$ depend on $X_{i}$ as mention in \ref{eq1}, as each $S_{i}$ depend only on $X_{i}$ we can say that sequence $S_{i}$ is independent.
+\begin{equation}
+    \tag{2.3}
+\pr{S_{1}=1,S_{2}=1,...,S_{n}=1}=\Pi_{i=1}^{n}\pr{S_{i}=1}
+\end{equation}
+Any subset of terms of sequence $\{S_{i}\}$ is a set of mutually independent random variables and its distribution is identical. 
+\begin{align}
+    \tag{2.4}
+    F_{S_{n}}(s)=F_{S_{k}}(s) \hspace{0.5cm} \forall s,k,n
+\end{align}
+So, the sequence $\{S_{i}\}$ is independent and identical.
+\item 
+\textbf{Ranking} refers to the data transformation in which the numerical or ordinary values are replaced by the rank of numerical value when compared to a list of other values.Usually we follow increasing order for ranking.\\
+
+Ranking of a sequence depend on every elements of the sequence.Let $\{R_{i}\}$ be the output sequence of the ranking function of $\{|X_{i}|\}$.
+\begin{equation}
+    \tag{2.5}
+    R_{k}=\text{rank of $|X_{k}|$ in the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}}
+\end{equation}
+As $R_{k}$ depend not only on $|X_{k}|$ but on the rest of the elements of the set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}. So the sequence $R_{i}$ is not independent. Hence $R_{i}$ is not an independent and identical distribution.
+\item 
+As the $i^{th}$ element of sequence R depends only on set\{$|X_{1}|,|X_{2}|,..,|X_{n}|$\}, we can say that sequence S and R are independent.
+\end{enumerate}
+Answer:A,C
+\end{document}
